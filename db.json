@@ -1,0 +1,51 @@
+{
+  "meetings": [
+    {
+      "title": "Weekly Meeting",
+      "date": "2026-07-29",
+      "discription": "Just to discuss weekly accomplishments and discussing next week aims.",
+      "participant": "Yuvraj , Madhav , Rahul , Raj",
+      "meetingtype": "online",
+      "time": "18:09",
+      "duration": "26",
+      "id": "9Z7XcG6fsbc"
+    },
+    {
+      "title": "Monthly",
+      "date": "2026-08-01",
+      "discription": "To discuss monthly tasks.",
+      "admin": "Ansh",
+      "time": "17:30",
+      "duration": "45",
+      "id": "CIOoY2Fdsv8"
+    },
+    {
+      "title": "Annualy ",
+      "date": "2027-01-01",
+      "discription": "To discuss anual goals .",
+      "admin": "Yuvraj",
+      "time": "12:00",
+      "duration": "60",
+      "id": "QOiTOxrMfhw"
+    },
+    {
+      "title": "Quarterly",
+      "date": "2026-11-01",
+      "discription": "To discuss quarterly goals.",
+      "admin": "Yuvraj",
+      "time": "22:08",
+      "duration": "30",
+      "id": "oLmUj4IUy3U"
+    },
+    {
+      "title": "Tech Team",
+      "date": "2026-08-03",
+      "discription": "Tech team discussion for new projects.",
+      "admin": "Yuvraj",
+      "time": "17:14",
+      "duration": "25",
+      "id": "H8gCPdXbO8A"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
