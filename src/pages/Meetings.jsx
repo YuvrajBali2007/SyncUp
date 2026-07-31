@@ -11,8 +11,12 @@ const Meetings = () => {
   }, []);
 
   const fetchMeetings = async () => {
-    const response = await axios.get("http://localhost:3000/meetings");
-    setMeetings(response.data);
+   const response = await axios.get(
+  "https://6a6c37049939b347ccce8b71.mockapi.io/api/v1/meetings"
+);
+
+setMeetings(response.data);
+    
   };
 
   const filteredMeetings = meetings.filter((meeting) =>
@@ -28,9 +32,13 @@ const Meetings = () => {
       return;
     }
 
-    await axios.delete(`http://localhost:3000/meetings/${id}`);
+    await axios.delete(
+  `https://6a6c37049939b347ccce8b71.mockapi.io/api/v1/meetings/${id}`
+);
 
-    fetchMeetings();
+fetchMeetings();
+
+   
   };
 
   

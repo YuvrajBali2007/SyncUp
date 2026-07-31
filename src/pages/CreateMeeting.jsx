@@ -3,7 +3,7 @@ import axios from "axios";
 const CreateMeeting = () => {
   
   const[title,settitle] = useState("");
-  const[description , setdiscription] = useState("");
+  const[description , setdescription] = useState("");
   const[duration , setduration] = useState("");
   const[date , setdate] = useState("");
   const[time , settime] = useState("");
@@ -15,15 +15,18 @@ const CreateMeeting = () => {
     const meeting = {
       title : title ,
       date : date,
-      discription : description,
+      description : description,
       admin: admin,
-      // meetingtype: meetingtype,
+      
       time: time,
       duration: duration
     };
-    await axios.post("http://localhost:3000/meetings" , meeting)
+    await axios.post(
+  "https://6a6c37049939b347ccce8b71.mockapi.io/api/v1/meetings",
+  meeting
+);
     settitle("");
-  setdiscription("");
+  setdescription("");
   setdate("");
   settime("");
   setduration("");
@@ -31,13 +34,13 @@ const CreateMeeting = () => {
   }
   const handleReset = () => {
   settitle("");
-  setdiscription("");
+  setdescription("");
   setdate("");
   settime("");
   setduration("");
   setadmin("");
-  setmeetingtype("online");
-};
+  }
+ 
   return (
     <div className="container mt-5">
       <div className="card shadow">
@@ -71,7 +74,7 @@ const CreateMeeting = () => {
                 rows="4"
                 placeholder="Enter meeting description"
                 value={description}
-                onChange={(e) => setdiscription(e.target.value)}
+                onChange={(e) => setdescription(e.target.value)}
               ></textarea>
             </div>
 
@@ -129,22 +132,7 @@ const CreateMeeting = () => {
               />
             </div>
 
-            {/* <div className="mb-4">
-              <label className="form-label">
-                Meeting Type
-              </label>
-               
-
-              <select className="form-select"
-              value={meetingtype}
-                  onChange={(e) => setmeetingtype(e.target.value)}>
-                <option>Online</option>
-                <option>Offline</option>
-                <option>Hybrid</option>
-                
-              </select> */}
-               
-            {/* </div> */}
+            
 
             <button
               type="submit"
@@ -166,7 +154,7 @@ const CreateMeeting = () => {
         </div>
       </div>
     </div>
-  );
+   );
 };
 
 export default CreateMeeting;

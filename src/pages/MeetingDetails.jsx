@@ -12,11 +12,14 @@ const MeetingDetails = () => {
   }, []);
 
   const fetchMeeting = async () => {
-    const response = await axios.get(
-      `http://localhost:3000/meetings/${id}`
-    );
+   const response = await axios.get(
+  `https://6a6c37049939b347ccce8b71.mockapi.io/api/v1/meetings/${id}`
+);
 
-    setMeeting(response.data);
+setMeeting(response.data);
+   
+
+   
   };
 
   if (!meeting) {
@@ -51,9 +54,9 @@ const MeetingDetails = () => {
             <strong>Admin:</strong> {meeting.admin}
           </p>
 
-          <p>
+          {/* <p>
             <strong>Meeting Type:</strong> {meeting.meetingtype}
-          </p>
+          </p> */}
           
         </div>
       </div>
